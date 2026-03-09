@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data value</title>
+</head>
+<body>
+    <script>
+        //types of data value
+        //primitive : single value(immutable)
+             //example:   number,string,boolean,null,undefined,symbol,bigint
+               
+               let name="Aamani";
+               let age=19;
+               let isMarried=false;
+               let address=null;
+               let education;
+              // console.log(name);
+               //console.log(typeof(name));
+
+               console.log(isMarried);
+               console.log(typeof(isMarried));
+
+               //bigint
+               let salary=BigInt(79393842744760)
+               console.log(salary);
+               //symbol
+               let name1="Vishal";
+               let name2="Vishal";
+               console.log(name1==name2);
+               
+               
+
+        //non-primitive /reference/object-(mutable value)
+             //example: array,object,function
+             //object - An object is a collection of its keys and value.
+
+             let student={
+                name:"Vishal",
+                age:23,
+                isMarried:true,
+                adress:{
+                    streetNo: 12,
+                    area: "Indirapurum",
+                    city: "Pune",
+                    pincode: 14268,
+                    country:"India",
+                },
+                course:"B.Tech",
+                branch:"CSE-DS",
+                year:2025,
+                getInfo:function(){
+                    return "My education is " + student.course + " " + student.branch + "and the year is" + student.year
+
+                }
+
+             };
+             console.log(student);
+             //accessing object properties/keys
+             //using dot notation
+             console.log(student.name + " " + student.age + " " + student.adress.country + "and the year is" + student.year);
+             console.log(typeof(student));
+             console.log(student.getInfo());
+             console.log('name' in student);
+
+             //accessing object's keys/property using bracket notation
+              console.log(student["name"]);
+
+
+    </script>
+    
+</body>
+</html>
