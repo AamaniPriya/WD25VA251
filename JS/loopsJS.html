@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JS</title>
+</head>
+<body>
+    <script>
+        //loops in JS
+        //1. for loop
+        //2. while loop
+        //3. do-while loop
+        //4. for-in loop
+        //5. for-of loop
+
+        //1. for loop - it is used to execute a block of code a number of times until the condition is false.
+        //syntax: for(initialization; condition; increment/decrement){
+            //code to be executed
+        //}
+        //for......best used when you know the number of iterations in advance.
+          let studentlist=["Vikas", "Vinay", "Vivek", "Deepak", "Sneha","Shiva"];
+          for(let i=0; i<studentlist.length; i++){
+              console.log(studentlist[i]);
+          }
+          //while....used when the number of iterationis uncertain ,and the loop should continue as a condition is true.
+
+          let x=0;
+          while(x<studentlist.length){
+              console.log(studentlist[x]);
+              x++;
+          }
+
+          //for-of-loop....iterates over the value of iterable objects
+          //(like arrays, string,maps, and sets)
+          for(let y of studentlist){
+              console.log(y);
+          }
+          let selfinfo={
+              name:"Aamani",
+              age:19,
+              isMarried:false,
+              adress:{
+                  streetNo: 12,
+                  area: "Indirapurum",
+                  city: "Pune",
+                  pincode: 14268,
+                  country:"India",
+              },
+              course:"B.Tech",
+              branch:"CSE-DS",
+              year:2025,
+          };
+          for(let objkeys in selfinfo){
+            console.log(selfinfo[objkeys]);
+          }
+          
+    </script>
+    
+</body>
+</html>

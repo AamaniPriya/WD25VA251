@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //In JavaScript, conditional statements are used to perform different actions based on different conditions, which evaluate to either true or false. The primary types of conditional statements are if, else, else if, the switch statement, and the ternary operator (? :). 
+        //1. if statement: It executes a block of code if a specified condition is true.
+        let age=19;
+        if(age>=18){
+            console.log("Valid age for voting");
+        }
+
+        //if-else statement: It executes one block of code if a specified condition is true, and another block of code if the condition is false.
+        if(age<18){
+            console.log("wait for next year");
+        }
+        else{
+            console.log("You are not eligible to vote.");
+        }
+        //switch....evaluates an expression and executes code based on matching case clauses. It is often used as an alternative to multiple if-else statements when there are many conditions to evaluate.
+       let grade="A";
+       switch(grade){
+        case'A': result="First Division";
+        break;
+        case 'B': result="Second Division";
+        break;
+        case 'C': result="Third Division";
+        break;
+        default: result="Fail";
+       }
+       console.log(result);
+//if else if else.....used to specify a new condition to test, if the first condition is false. It allows you to check multiple conditions sequentially.
+let marks =45;
+
+if(marks>=60){
+    console.log("First Division");
+}
+else if(marks<=60 && marks>=40){    
+    console.log("Second Division");
+}
+else if(marks<40 && marks>=30){
+    console.log("Third division");
+}
+else {
+    console.log("Fail");
+}
+
+
+let score=[4,3,5,1,0];
+let b=0;
+for(let i=0;i<score.length;i++){
+b=b+score[i];
+}
+let average=b/score.length;
+
+
+if(b>=6){
+    console.log("First Division");
+}
+else if(b<=6 && b>=4){    
+    console.log("Second Division");
+}
+else if(b<4 && b>=2){
+    console.log("Third division");
+}
+else {
+    console.log("Fail");
+}
+
+
+</script>
+    
+</body>
+</html>
