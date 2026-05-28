@@ -1,0 +1,35 @@
+body{
+font-family: Arial;
+background-color:skyblue;
+text-align:center;
+padding:40px;
+}
+.container{
+background:white;
+padding:25px;
+width:400px;
+margin:auto;
+border-radius:10px;
+box-shadow:8px 8px 22px green;
+}
+input{
+padding:8px;
+width:80%;
+margin-top:5px;
+}
+button{
+padding:10px 20px;
+background-color:blue;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+button:hover{
+background-color:blue;
+}
+#result{
+margin-top:20px;
+font-weight:bold;
+font-size:18px;
+}
