@@ -1,37 +1,15 @@
-import React from 'react'; 
-import './App.css'; 
-const Student = (props) => { 
-return ( 
- <div className="student-card"> 
- <h2>Student Details</h2> 
- <p> 
- <strong>Name:</strong> {props.name} 
- </p> 
- <p> 
- <strong>Course:</strong> {props.course} 
- </p> 
- <p> 
- <strong>Marks:</strong> {props.marks} 
- </p> 
- </div> 
-); 
-; 
-function App() { 
-return ( 
- <div className="App"> 
- <h1>Student Information System</h1> 
-}
- 
- 
-<div className="student-container"> 
- <Student name="Monika" course="B.Tech Data Science" marks="95" 
- /> 
- <Student name="Rahul" course="B.Tech CS" marks="88"
- /> 
- <Student name="Sneha" course="B.Tech IT" marks="92" 
- /> 
+
+import React, { useState } from 'react'; import './App.css'; const App => { const [count, setCount] = 
+useState(0); return ( 
+ <div className="counter-box"> 
+ <h1>React Counter</h1> 
+ <h2 className={count > 0 ? 'pos' : count < 0 ? 'neg' : ''}>{count}</h2> 
+ <div className="buttons"> 
+ <button onClick={() => setCount(count + 1)}>Increment (+)</button> 
+ <button onClick={ ()=> setCount(count - 1)}>Decrement (-)</button> 
+ <button onClick={ ()=> setCount(0)}>Reset</button> 
  </div> 
  </div> 
  ); 
-} 
+};
 export default App;
