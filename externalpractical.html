@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px blueviolet;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 8px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Student Result Calculator</h2>
+
+    <input type="number" id="s1" placeholder="Enter Subject 1 Marks"><br>
+
+    <input type="number" id="s2" placeholder="Enter Subject 2 Marks"><br>
+
+    <input type="number" id="s3" placeholder="Enter Subject 3 Marks"><br>
+
+    <input type="number" id="s4" placeholder="Enter Subject 4 Marks"><br>
+
+    <button onclick="grade()">Calculate Result</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+
+function grade()
+{
+    let a = Number(document.getElementById("s1").value);
+    let b = Number(document.getElementById("s2").value);
+    let c = Number(document.getElementById("s3").value);
+    let d = Number(document.getElementById("s4").value);
+
+    let total = a + b + c + d;
+    let avg = total / 4;
+
+    let g;
+
+    if(avg >= 90)
+        g = "A";
+    else if(avg >= 75)
+        g = "B";
+    else if(avg >= 50)
+        g = "C";
+    else
+        g = "Fail";
+
+    document.getElementById("result").innerHTML =
+        "Total Marks = " + total +
+        "<br>Average = " + avg.toFixed(2) +
+        "<br>Grade = " + g;
+}
+
+</script>
+
+</body>
+</html>
